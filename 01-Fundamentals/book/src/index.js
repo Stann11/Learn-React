@@ -8,16 +8,19 @@ const books = [
     title: "The Book of Charlie",
     author: "David Von Drehle",
     img: "./images/book1.jpg",
+    id: 1,
   },
   {
     title: "CROWNED",
     author: " Kahran Bethencourt",
     img: "./images/book2.jpg",
+    id: 2,
   },
   {
     title: "Happy Place",
     author: "Emily Henry",
     img: "./images/book3.jpg",
+    id: 3,
   },
 ];
 // const firstbook = {
@@ -40,8 +43,8 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { img, title, author } = book;
-        return <Book author={author} title={title} img={img} />;
+        const { img, title, author, id } = book;
+        return <Book author={author} title={title} img={img} key={id} />;
       })}
     </section>
   );
