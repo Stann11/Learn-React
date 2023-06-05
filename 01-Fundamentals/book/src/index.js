@@ -3,41 +3,46 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 //Props
-const firstbook = {
-  title: "The Book of Charlie",
-  author: "David Von Drehle",
-  img: "./images/book1.jpg",
-};
-const secondbook = {
-  title: "CROWNED",
-  author: " Kahran Bethencourt",
-  img: "./images/book2.jpg",
-};
-const thirdbook = {
-  title: "Happy Place",
-  author: "Emily Henry",
-  img: "./images/book3.jpg",
-};
+const books = [
+  {
+    title: "The Book of Charlie",
+    author: "David Von Drehle",
+    img: "./images/book1.jpg",
+  },
+  {
+    title: "CROWNED",
+    author: " Kahran Bethencourt",
+    img: "./images/book2.jpg",
+  },
+  {
+    title: "Happy Place",
+    author: "Emily Henry",
+    img: "./images/book3.jpg",
+  },
+];
+// const firstbook = {
+//   title: "The Book of Charlie",
+//   author: "David Von Drehle",
+//   img: "./images/book1.jpg",
+// };
+// const secondbook = {
+//   title: "CROWNED",
+//   author: " Kahran Bethencourt",
+//   img: "./images/book2.jpg",
+// };
+// const thirdbook = {
+//   title: "Happy Place",
+//   author: "Emily Henry",
+//   img: "./images/book3.jpg",
+// };
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book
-        author={firstbook.author}
-        title={firstbook.title}
-        img={firstbook.img}
-      />
-      <Book
-        author={secondbook.author}
-        title={secondbook.title}
-        img={secondbook.img}
-      />
-      <Book
-        author={thirdbook.author}
-        title={thirdbook.title}
-        img={thirdbook.img}
-      />
-      {/* <Author1 /> */}
+      {books.map((book) => {
+        const { img, title, author } = book;
+        return <Book author={author} title={title} img={img} />;
+      })}
     </section>
   );
 };
