@@ -7,18 +7,15 @@ import ReactDOM from "react-dom/client";
 function Greeting() {
   return (
     <>
-      <div>
-        <h3>Hello World!</h3>
-        <ul>
-          <li>
-            <a href="#">Hello People</a>
-          </li>
-        </ul>
-      </div>
-      <h2>Hello World!</h2>
+      <Person />
+      <Message />
     </>
   );
 }
+const Person = () => <h2>Satnamsingh Sandhu</h2>;
+const Message = () => {
+  return <p>This is my message</p>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Greeting />);
