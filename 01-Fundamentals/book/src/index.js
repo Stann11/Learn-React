@@ -63,15 +63,20 @@ const Book = ({ author, title, img }) => {
 };
 
 const Eventexample = () => {
-  const handleinput = () => {
+  const handleinput = (f) => {
     console.log("Change in the input field");
+    console.log(f.target.value);
   };
   const handlebutton = () => {
     alert("The button is clicked");
   };
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submited");
+  };
   return (
     <section>
-      <form>
+      <form onSubmit={handlesubmit}>
         <h2>Typical form</h2>
         <input
           type="text"
