@@ -41,11 +41,14 @@ const books = [
 
 const BookList = () => {
   return (
-    <section className="booklist">
-      {books.map((book) => {
-        return <Book {...book} key={book.id} />;
-      })}
-    </section>
+    <>
+      <Eventexample />
+      <section className="booklist">
+        {books.map((book) => {
+          return <Book {...book} key={book.id} />;
+        })}
+      </section>
+    </>
   );
 };
 
@@ -56,6 +59,28 @@ const Book = ({ author, title, img }) => {
       <h2>{title}</h2>
       <h4>{author}</h4>
     </article>
+  );
+};
+
+const Eventexample = () => {
+  const handleinput = () => {
+    console.log("Change in the input field");
+  };
+  const handlebutton = () => {
+    alert("The button is clicked");
+  };
+  return (
+    <section>
+      <form>
+        <h2>Typical form</h2>
+        <input
+          type="text"
+          style={{ marginRight: "20px" }}
+          onChange={handleinput}
+        ></input>
+        <button onClick={handlebutton}>Click Me </button>
+      </form>
+    </section>
   );
 };
 
