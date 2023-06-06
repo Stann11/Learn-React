@@ -23,69 +23,29 @@ const books = [
     id: 3,
   },
 ];
-// const firstbook = {
-//   title: "The Book of Charlie",
-//   author: "David Von Drehle",
-//   img: "./images/book1.jpg",
-// };
-// const secondbook = {
-//   title: "CROWNED",
-//   author: " Kahran Bethencourt",
-//   img: "./images/book2.jpg",
-// };
-// const thirdbook = {
-//   title: "Happy Place",
-//   author: "Emily Henry",
-//   img: "./images/book3.jpg",
-// };
 
 const BookList = () => {
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book.title);
+  };
   return (
-    <>
-      <Eventexample />
-      <section className="booklist">
-        {books.map((book) => {
-          return <Book {...book} key={book.id} />;
-        })}
-      </section>
-    </>
+    <section className="booklist">
+      {books.map((book) => {
+        return <Book {...book} key={book.id} getBook={getBook} />;
+      })}
+    </section>
   );
 };
 
-const Book = ({ author, title, img }) => {
+const Book = ({ author, title, img, id, getBook }) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
+      <button onClick={() => getBook(id)}>Buy</button>
     </article>
-  );
-};
-
-const Eventexample = () => {
-  const handleinput = (f) => {
-    console.log("Change in the input field");
-    console.log(f.target.value);
-  };
-  const handlebutton = () => {
-    alert("The button is clicked");
-  };
-  const handlesubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submited");
-  };
-  return (
-    <section>
-      <form onSubmit={handlesubmit}>
-        <h2>Typical form</h2>
-        <input
-          type="text"
-          style={{ marginRight: "20px" }}
-          onChange={handleinput}
-        ></input>
-        <button onClick={handlebutton}>Click Me </button>
-      </form>
-    </section>
   );
 };
 
