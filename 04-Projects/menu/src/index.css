@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+.heading {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.heading h1 {
+  font-size: 1.5rem;
+}
+.heading hr {
+  height: 0.3rem;
+  background-color: rgb(215, 0, 0);
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+}
+.btn_container button {
+  width: 6rem;
+  justify-content: space-between;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  border: none;
+  background-color: rgb(228, 0, 0);
+  color: white;
+}
+.btn_container {
+  margin-bottom: 1.5rem;
+}
+.menu_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem 7rem;
+  gap: 2rem;
+}
+.single {
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.single img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  margin-bottom: 1rem;
+}
+.head h4 {
+  text-transform: capitalize;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+.price {
+  background-color: rgb(215, 0, 0);
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+.data p {
+  padding: 1rem 1rem;
+}
