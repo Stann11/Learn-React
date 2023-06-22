@@ -81,3 +81,13 @@
 .data p {
   padding: 1rem 1rem;
 }
+@media screen and (max-width: 990px) {
+  .menu_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menu_container {
+    grid-template-columns: 1fr;
+  }
+}
