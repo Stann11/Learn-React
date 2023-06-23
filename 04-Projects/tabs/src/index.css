@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: "Poppins", sans-serif;
+}
+.heading {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.heading hr {
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(215, 0, 0);
+  height: 0.4rem;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+.all {
+  display: flex;
+  justify-content: center;
+}
+.btn_container {
+  width: 15rem;
+}
+.job_btn {
+  border: none;
+  padding: 0.3rem;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+.job_btn:hover {
+  border-left: 2px solid black;
+  background-color: rgb(242, 242, 242);
+}
+.active_btn {
+  border-left: 2px solid black;
+  background-color: rgb(242, 242, 242);
+}
+.single_article {
+  width: 60%;
+}
+.single_article h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.single_article span {
+  background-color: rgb(231, 231, 231);
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+.single_article p {
+  margin-top: 1rem;
+}
+
+.duty {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.icons {
+  color: rgb(215, 0, 0);
+  font-size: 1.3rem;
+}
